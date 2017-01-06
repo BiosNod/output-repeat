@@ -8,10 +8,10 @@ start:
     assume cs:code, ds: data   
     mov ax, data
     mov ds, ax 
-    ;ввод символа
+    ;РІРІРѕРґ СЃРёРјРІРѕР»Р°
     mov ah, 07
     int 21h 
-    ;символ в число
+    ;СЃРёРјРІРѕР» РІ С‡РёСЃР»Рѕ
     sub al, 30h
     mov cl, al
    
@@ -19,8 +19,9 @@ start:
     lea dx, hello
     int 21h
     loop mloop
-    ;DOS функция выхода из программы
+    ;DOS С„СѓРЅРєС†РёСЏ РІС‹С…РѕРґР° РёР· РїСЂРѕРіСЂР°РјРјС‹
     mov ax, 4c00h
     int 21h
 code ends
+the output string entered number of times
 end start
